@@ -1,0 +1,164 @@
+<<!DOCTYPE html> 
+<head>
+<title> 
+</title> 
+<style> 
+table 
+{ 
+color:white; 
+border-radius:20px; 
+} 
+#Button 
+{
+background-color:green; 
+color:white; 
+height:32px; 
+width:85px; 
+border-radius:25px; 
+}
+ 
+body 
+{
+background-image: url('B3.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover; 
+background:liner-gradient(red,blue); 
+} 
+</style> 
+</head> 
+<body>
+<center> 
+<br>
+<h1 style="background-color:RED;">Registration Form</h1>
+</center>
+<br> 
+
+<form>
+<table border="0" bgcolor="black" align="center" cellspacing="20">
+<tr>
+<td><div class="input" >First Name</td>
+<td><input id="fname" type="text"  placeholder="First Name" size="25"required></td>
+</div>
+</tr>
+
+<tr> 
+<td><div class="input">Last Name</td> 
+<td><input type="text" id="lname" placeholder="Last Name" size="25" required></td> 
+</div>
+</tr>
+ 
+<tr> 
+<td><div class="input">Email Address</td> 
+<td><input type="text" id="email" placeholder="Email Address" size="25" required></td> 
+</div>
+</tr>
+ 
+<tr> 
+<td><div class="input">Password</td>
+<td><input type="password" id="pass" placeholder="Password" size="25" required></td> 
+</div>
+</tr> 
+
+<tr> 
+<td><div class="input">Event No</td> 
+<td><input type="password" id="eno" placeholder="Token NO" size="25" required></td>
+</div>
+</tr>
+ 
+<tr> 
+<td><div class="input" id="gender">Gender</td> 
+<td>
+<input type="radio" name="r1" >Male 
+<input type="radio" name="r1" >Female 
+</td> 
+</div>
+</tr>
+
+<tr>
+<td><div class="input" id="dob">DOB</td>
+<td>
+<select>
+<option>DAY</option>
+<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+<option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+<option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
+<option>31</option>
+</select>
+<select>
+<option>MONTH</option>
+<option>Jan</option><option>Feb</option><option>Mar</option><option>April</option><option>May</option><option>Jun</option><option>Jul</option><option>Aug</option><option>Sep</option><option>Act</option>
+<option>Nav</option><option>Dec</option>
+</select>
+<select>
+<option>YEAR</option>
+<option>1998</option><option>1999</option><option>2000</option><option>2001</option><option>2002</option><option>2003</option>
+</select>
+</div>
+<tr> 
+<td><div id="lang" class="input">Languages Known</td> 
+<td>
+<input type="checkbox" name="r1" >English
+<input type="checkbox" name="r1" >French
+<br>
+<input type="checkbox" name="r1" >Spanish
+<input type="checkbox" name="r1" >Hindi
+</td> 
+</div>
+</tr>
+
+<tr> 
+<td><div class="input">Address</td> 
+<td><textarea id="add" rows="3" cols="22"></textarea></td>
+</div>
+</tr>
+
+
+<tr> 
+<center><td><td><button id="entry">Register</button></center></td> 
+</div>
+</tr> 
+</form> 
+</table>
+
+<table id="display">
+<tr>
+	<th>Fname</th>
+	<th>Lname</th>
+	<th>Email</th>
+	<th>Event No</th>
+</tr>
+</table>	
+	
+
+
+<script>
+var entry = document.getElementById("entry"); 
+entry.addEventListener("click", displayDetails); 
+
+var row = 1; 
+ 
+function displayDetails() 
+{ 
+	var fname = document.getElementById("name").value; 
+	var lname = document.getElementById("age").value; 
+	var email = document.getElementById("grade").value;
+	var eno = document.getElementById("eno").value;
+var display = document.getElementById("display");
+var newRow = display.insertRow(row);
+
+var cell1 = newRow.insertCell(0);
+var cell2 = newRow.insertCell(1);
+var cell3 = newRow.insertCell(2);
+var cell4 = newRow.insertCell(3);
+
+cell1.innerHTML = fname;
+cell2.innerHTML = lname;
+cell3.innerHTML = email; 
+cell4.innerHTML = eno; 
+
+row++; 
+}
+</script>
+</body>
+ </html> 
